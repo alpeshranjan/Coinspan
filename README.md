@@ -1,106 +1,81 @@
-# frt_project
+# Coinspan
 
-<h1> Predictive analysis for cryptocurrency investment </h1>
+Coinspan is a long-horizon look at historical cryptocurrency prices. A notebook and a Power BI dashboard compare market cap, closing prices, and moving averages, so a reader can see how a long hold in the largest coins differed from a wider set of smaller ones.
 
-<h2> Project Statement/Opportunity </h3>
+The prices run from each coin's start through 30 November 2021. This is historical analysis. It does not forecast a future price, and it is not investment advice.
 
-<p>In this project we will be determining if investing in cryptocurrency and holding that investment for long term is beneficial for the investor or not. Here we will observe the past trends of different currencies that include their open, high, low and close alongside the time period in date format. Then we shall be performing predictive analysis for the investment decision and visualise it through a dashboard using PowerBI.</p>
+## Live dashboard
 
-<h2> Azure Technologies Used </h3>
+The site is [https://black-dune-0c5f90200.1.azurestaticapps.net](https://black-dune-0c5f90200.1.azurestaticapps.net). The page embeds the Power BI report.
 
-<b> 1. PowerBI embedded </b> <br>
-<b> 2. Static WebApp  </b> <br>
-<b> 3. Azure Virtual Machines </b>
-
-<h2> Prerequisites </h3>
-
-<b> 1. Azure Subscription </b><br>
-<b> 2. Python </b>
-
-<h2> Project Description </h2>
-
-<p> The goal for this project is analysing if long term investment and holding those are worth the wait considering the immense crashes and risk of being a part of new fangled mode of investment. Observing the current Return of Investment and historic trends on investing in cryptocurrencies our project will determine if you shall be holding the money in one a diversified set of coins or in a limited number of strong cryptocurrency projects. We shall also be laying down a dashboard which will let you select low return and low risk coins vs high return and high risk coins. We have used Bootstrap to create a webpage where we shall be displaying our Dashboards. </p>
-
-<h2> Proposed Methodology </h2>
-<p> Using the dataset from Kaggle for historic prices of top 100 cryptocurrency coins for exploratory data analysis using tools provided by MicrosoL azure. Later on using Power BI for visualisation of the desired results. We are using Power BI because the solu6on comprises several products and services, and value and versatility comes from leveraging the individual elements, and taking advantage of how they work together. Hence making the predictive conclusion will be easier and
-accurate as user point of view. </p>
-
-<h2> About the DataSet </h2>
-<p>The dataset is a Zip file that consists of the crypto prices of nearly 75 coins from their start date till 30/11/2021. A leaderboard file as of 30/11/2021 has also been included in the zip file named Current Crypto Leaderboard.csv, which has the market capitalization, rank, coin name, symbol, Price, and a tagging variable that mentions the availability of the corresponding coin in the dataset. Historical data(day-interval) of all the coins mentioned in the leaderboard is provided in the dataset. The leaderboard is subject to change as the market cap increases/decreases. Any new coin which enters the top 100 will be added to the dataset. The leaderboard and the dataset will be updated on a monthly basis.</p>
-
-<img width="716" alt="Screenshot 2022-07-13 at 11 46 07 PM" src="https://user-images.githubusercontent.com/58964309/178824748-bcfaa0bb-d6e8-4002-8657-7a2389172dc2.png">
-
-
-
-<p> The name column contains the actual name of the coin</p> <br>
-<p> The symbol column contains the symbol of the coin </p> <br>
-<p> The high column contains the highest price that particular coin has reached</p> <br>
-<p> The low column contains the lowest price that particular coin has reached</p> <br>
-<p> The open column contains the at what price the market opened</p> <br>
-<p>The close column contains the at what price the market closed</p> <br>
-<p> The volume column contains how much the given cryptocurrency has traded over a period of time</p> <br>
-<p> The marketcap column contains what is the marketcap at that particular date and time for the listed crypto</p> <br>
-
-<h2> Exploratory Data Analysis </h2>
-<p> We have used Google Colab with python for EDA of the dataset. We used pandas, numpy, matplotlib.pyplot, seaborn, pandas_datareader.data  plotly.express, and plotly.graph_objects. Pandas is mainly used for data analysis and associated manipulation of tabular data in Dataframes.NumPy is a Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourier transform, and matrices. </p>
-
-
-<img width="1125" alt="Screenshot 2022-07-14 at 1 27 13 AM" src="https://user-images.githubusercontent.com/58964309/178824964-c6b2b111-243a-41bc-83f2-57e5af401400.png">
-
-</p> In this cell we have plotted the marketcap of top 5 coins </p>
-<img width="1226" alt="Screenshot 2022-07-14 at 1 27 56 AM" src="https://user-images.githubusercontent.com/58964309/178824988-b6cc5b80-d600-4697-8a5c-88649b29a716.png">
-</p> In this cell we have plotted the closing price of top 4 coins in a line chart</p>
-
-
-<img width="1226" alt="Screenshot 2022-07-14 at 1 28 09 AM" src="https://user-images.githubusercontent.com/58964309/178825023-300587d8-cfb1-4590-b04f-dc03f2db6a6b.png">
-</p> In this cell we have plotted the closing price of top 4 coins in a line chart excluding BTC and ETH and USDT in the last graph </p>
-
-<img width="1356" alt="Screenshot 2022-07-14 at 1 28 30 AM" src="https://user-images.githubusercontent.com/58964309/178825114-c626eb7c-05d3-43f3-8dcd-77c0c7060831.png">
-</p> In this cell we have plotted the prices of differnet coins in line chart </p>
-
-
-<img width="1356" alt="Screenshot 2022-07-14 at 1 28 43 AM" src="https://user-images.githubusercontent.com/58964309/178825140-4c94d54f-8de6-4d9f-a6de-b15e92e70ee4.png">
-</p> In this cell we have plotted the moving average coins to determine the sentiments of market </p>
-
-
-<img width="1356" alt="Screenshot 2022-07-14 at 1 29 00 AM" src="https://user-images.githubusercontent.com/58964309/178825153-8b227f8f-18a5-4f21-bd26-ce6b58ab8611.png">
-</p> In this cell we have plotted the area graph </p>
-
-<img width="1356" alt="Screenshot 2022-07-14 at 1 29 11 AM" src="https://user-images.githubusercontent.com/58964309/178825213-0395f878-4655-49cf-8c4a-a8aaf2f76d17.png">
-
-</p> In this cell we have plotted area graph for market cap of all the coins </p>
-</p> To learn more about the EDA kindly refer the python file in the repo </p>
-
-<h2> Visualization of DataSet on PowerBI </h2>
-<p> Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. PowerBI is a tool viz tool provided by microsoft, it enables us to create intercative dashboards and help us to gain insights out of data to make informed decisions. In out case informed decision in investment. </p>
-
-<img width="1238" alt="Screenshot 2022-07-14 at 1 31 04 AM" src="https://user-images.githubusercontent.com/58964309/178828029-ebef43e0-62c8-49b9-ac69-30ef36fa4117.png">
-
-<img width="1238" alt="Screenshot 2022-07-14 at 1 31 12 AM" src="https://user-images.githubusercontent.com/58964309/178828066-3c3dcf8b-58af-4fbc-a0a6-d43eb3ab334c.png">
-
-<img width="1238" alt="Screenshot 2022-07-14 at 1 31 19 AM" src="https://user-images.githubusercontent.com/58964309/178828090-ff086daf-70ab-470c-9cfd-4fe6dba35bcb.png">
-
-<p> Above are few snapshots from the dashboards we have created in PowerBI, please click on the link we have provided to interact with the Dashboard and read the insights. </p>
-
-<h2> Deployment of website on Azure </p>
-<p> We have actually used Virtual Machine to access PowerBI, other than that we have used the azure service : static Webapp to deploy the website. </p>
-
-
-<img width="1440" alt="Screenshot 2022-07-14 at 1 29 51 AM" src="https://user-images.githubusercontent.com/58964309/178829554-d336fafc-b2a2-4d1f-bca4-bed984c90466.png">
-
-
-<img width="1440" alt="Screenshot 2022-07-14 at 1 30 10 AM" src="https://user-images.githubusercontent.com/58964309/178829578-da047c33-5f64-49f2-af23-ddc6cf1f41c9.png">
-
-<img width="1440" alt="Screenshot 2022-07-14 at 1 30 18 AM" src="https://user-images.githubusercontent.com/58964309/178829611-fd5dccec-e5a6-41cd-8fe6-5b085944477f.png">
-
-<p> Above are the snapshots from resource group window which demonstates the usage of azure services </p>
-
-</h2> Working video of Website </h2>
-
-
+A short walkthrough of the site is here:
 
 https://user-images.githubusercontent.com/58964309/178829978-e64d23e1-0e3d-4c3c-97bf-afc9c3f1d4ab.mov
 
-<h2> Project Link </h2>
+## What is in the repo
 
-https://black-dune-0c5f90200.1.azurestaticapps.net
+| Path | Contents |
+| --- | --- |
+| `EDA for historic dataset/EDA_inv.ipynb` | Exploratory analysis of the daily prices |
+| `EDA for historic dataset/final.csv` | Daily prices the notebook reads |
+| `Dashboards/Dashboard.pbix` | Power BI report |
+| `index.html` | Bootstrap page that embeds the dashboard |
+
+## What the notebook charts
+
+- Market cap of the five largest coins at the end of the series
+- Closing prices of the largest coins, then the same chart with BTC removed, with BTC and ETH removed, and with BTC, ETH, and USDT removed, so smaller coins stay visible
+- Candlesticks for BTC, ETH, USDT, BNB, and ADA
+- The close against a 50-day and a 200-day moving average for those five coins
+- Interactive area charts of the daily high and of market cap, with 1-month, 6-month, 1-year, and full-history ranges
+
+## Dataset
+
+The source archive holds daily prices for about 75 coins through 30 November 2021, plus `Current Crypto Leaderboard.csv` from that date. The leaderboard has market capitalization, rank, coin name, symbol, price, and a flag for whether that coin's history is in the price files.
+
+Each price row has:
+
+| Column | Meaning |
+| --- | --- |
+| Name | Coin name |
+| Symbol | Ticker |
+| High | Highest price that day |
+| Low | Lowest price that day |
+| Open | Opening price |
+| Close | Closing price |
+| Volume | Amount traded |
+| Marketcap | Market capitalization on that date |
+
+The leaderboard was meant to be refreshed monthly as the top 100 changed. The copy used here stops on 30 November 2021.
+
+## What the notebook concludes
+
+Using prices through November 2021, the closing notes say:
+
+- Bitcoin led by market cap. Ethereum was about half of Bitcoin, and the other coins were much smaller. USDT was about a third of Ethereum.
+- Bitcoin's 2021 high was about $60,000, far above Ethereum.
+- A multi-year hold in BTC, ETH, and USDT was the part of this set that rewarded investors. The notes treat the smaller, more volatile names as poor long-term holds, and point at the USDT candlestick as an example of a long volatile stretch.
+
+Those are observations on this dataset. They are not a model, and they do not describe prices after 30 November 2021.
+
+## Stack
+
+- Python, with pandas, NumPy, Matplotlib, Seaborn, and Plotly
+- Power BI for the dashboard
+- Bootstrap 5 for the page
+- Azure Static Web Apps for the site
+- An Azure virtual machine, used to work in Power BI
+
+## Run it locally
+
+Open `EDA for historic dataset/EDA_inv.ipynb`. The upload cell was written for Google Colab. Locally, `final.csv` is already in that folder, so skip the Colab upload and read the file from there.
+
+```bash
+pip install pandas numpy matplotlib seaborn plotly pandas-datareader
+```
+
+Open `Dashboards/Dashboard.pbix` in Power BI Desktop to edit the report. The public page already shows the published report.
+
+## Deploy
+
+A push to `main` publishes the static site through `.github/workflows/azure-static-web-apps-black-dune-0c5f90200.yml`.
